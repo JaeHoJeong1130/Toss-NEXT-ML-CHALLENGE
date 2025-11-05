@@ -1,0 +1,28 @@
+
+# Polars를 사용한 피처 엔지니어링 전략 코드 예시
+
+# 1. 상호작용(Interaction) 피처
+# lazy_df = lazy_df.with_columns([
+#     (pl.col('gender').cast(str) + "_" + pl.col('age_group').cast(str)).alias('user_context')
+# ])
+# print("상호작용 피처 예시 생성 완료")
+
+# 2. 통계(Aggregation) 피처
+# user_id_feature = 'l_feat_1'
+# user_agg = lazy_df.group_by(user_id_feature).agg([
+#     pl.col('clicked').mean().alias('user_ctr'),
+#     pl.len().alias('user_exposure_count') # pl.len() 사용
+# ])
+# lazy_df = lazy_df.join(user_agg, on=user_id_feature, how='left')
+# print("통계 피처 예시 생성 완료")
+
+# 3. 시간 기반 피처
+# lazy_df = lazy_df.with_columns([
+#     pl.col('day_of_week').is_in(['Saturday', 'Sunday']).cast(pl.Int8).alias('is_weekend'),
+#     pl.when(pl.col('hour').is_between(6, 11)).then(pl.lit('Morning'))
+#       .when(pl.col('hour').is_between(12, 17)).then(pl.lit('Afternoon'))
+#       .when(pl.col('hour').is_between(18, 22)).then(pl.lit('Evening'))
+#       .otherwise(pl.lit('Night')).alias('time_of_day')
+# ])
+# print("시간 기반 피처 예시 생성 완료")
+    

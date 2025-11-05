@@ -5,7 +5,7 @@ import gc
 dPATH = '/home/jjh/Project/competition/13_toss/data/'
 
 def feature_engineering(df: pl.LazyFrame) -> pl.LazyFrame:
-    """모든 전처리가 완료되도록 수정한 최종 피처 엔지니어링 함수"""
+    """피처 엔지니어링"""
     
     # 1. 타입 변환
     string_to_int_cols = ['gender', 'age_group', 'inventory_id', 'day_of_week', 'hour']

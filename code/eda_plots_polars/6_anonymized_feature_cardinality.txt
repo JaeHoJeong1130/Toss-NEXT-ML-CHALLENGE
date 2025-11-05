@@ -1,0 +1,19 @@
+Cardinality of Anonymized Features:
+shape: (74, 2)
+┌───────────┬─────────┐
+│ column    ┆ count   │
+│ ---       ┆ ---     │
+│ str       ┆ u32     │
+╞═══════════╪═════════╡
+│ feat_c_2  ┆ 4806603 │
+│ feat_e_2  ┆ 484192  │
+│ feat_b_6  ┆ 80769   │
+│ feat_d_4  ┆ 80488   │
+│ feat_e_10 ┆ 77630   │
+│ …         ┆ …       │
+│ l_feat_1  ┆ 2       │
+│ l_feat_13 ┆ 2       │
+│ l_feat_16 ┆ 2       │
+│ l_feat_20 ┆ 2       │
+│ l_feat_23 ┆ 2       │
+└───────────┴─────────┘

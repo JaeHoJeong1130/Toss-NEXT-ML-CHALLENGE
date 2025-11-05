@@ -1,0 +1,27 @@
+name: toss_final_env
+channels:
+  - rapidsai
+  - conda-forge
+  - nvidia
+  - defaults
+dependencies:
+  - python=3.10
+  
+  # RAPIDS 라이브러리를 개별적으로 명시
+  - cudf
+  - cupy
+  - nvtabular
+  - dask-cuda
+  
+  # 버전 충돌을 일으켰던 라이브러리 버전 고정
+  - pandas<2.2
+  - numpy<2.0
+  
+  # 기타 필요한 모든 라이브러리 명시
+  - xgboost
+  - scikit-learn
+  - pyarrow
+  - psutil
+  - pynvml
+  - protobuf
+  - cudatoolkit

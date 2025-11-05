@@ -14,7 +14,7 @@ import matplotlib.font_manager as fm
 
 # 시스템에 설치된 폰트 확인
 def get_korean_font():
-    """사용 가능한 한글 폰트를 찾아 반환합니다."""
+    """한글 폰트 찾기"""
     font_list = [f.name for f in fm.fontManager.ttflist]
     
     # 우선순위대로 폰트 검색
